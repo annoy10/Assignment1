@@ -1,40 +1,74 @@
-Chest X-Ray Pneumonia Classification Using Custom CNN
-
-Introduction
-Pneumonia is a serious respiratory infection that can affect the lungs and may be identified through chest X-ray images. Manual examination of X-ray images can require significant time and medical expertise.
-
-In this project, a **Custom Convolutional Neural Network (CNN) is developed to automatically classify chest X-ray images into two categories:
-
-NORMAL PNEUMONIA
-
-The purpose of this project is to explore how deep learning and CNNs can be used for automated medical image classification.
-
+Problem Set 1 - Bank Marketing Prediction
 Problem Statement
-The objective is to develop a deep learning model that can classify a given chest X-ray image as either NORMAL or PNEUMONIA.
+A banking institution wants to predict whether a customer will subscribe to a term deposit or not based on their banking behaviour.
 
-The model should learn important visual features from the training images and use those features to make predictions on previously unseen X-ray images.
+For this problem, Logistic Regression is used to classify customers into two categories:
 
-Objectives
-The main objectives of this project are:
+Yes - Customer subscribed to a term deposit
+No - Customer did not subscribe to a term deposit
+Dataset
+The dataset used is the Bank Marketing Dataset.
 
-To preprocess chest X-ray images for CNN-based classification.
+The dataset contains information about bank customers, including:
 
-To develop a custom CNN architecture using PyTorch.
+Age
+Job
+Marital Status
+Education
+Account Balance
+Housing Loan
+Personal Loan
+Contact Type
+Campaign Information
+Previous Contact Information
+Previous Campaign Outcome
+Term Deposit Subscription
+Dataset file:
 
-To classify X-ray images into NORMAL and PNEUMONIA categories.
+bank-full.csv
 
-To apply techniques for reducing overfitting.
+The dataset contains 45,211 customer records and 17 attributes.
 
-To train and validate the CNN model.
+Technologies Used
+Python
+Pandas
+Matplotlib
+Scikit-learn
+Google Colab
+Machine Learning Algorithm
+Logistic Regression
+Logistic Regression is a supervised machine learning algorithm used for classification problems.
 
-To evaluate the model using appropriate classification metrics.
+In this project, Logistic Regression is used to predict whether a customer will subscribe to a term deposit.
 
-To analyze the model's performance on unseen test images.
+Data Preprocessing
 
-Dataset Description
+The following preprocessing steps were performed:
 
-The project uses the **Chest X-Ray Images (Pneumonia) dataset.
+Loaded the dataset using Pandas.
+Converted categorical values into numerical values using LabelEncoder.
+Separated the features (X) and target variable (y).
+Split the dataset into training and testing sets.
+Standardized the features using StandardScaler.
+Train-Test Split
 
-The dataset contains chest X-ray images belonging to two classes:
+The dataset was divided into:
 
-NORMAL PNEUMONIA
+80% Training Data
+20% Testing Data
+Model Training
+
+A Logistic Regression model was created using Scikit-learn.
+
+The model was trained using the training dataset and then used to predict the target values of the testing dataset.
+
+Evaluation Metrics
+
+The model was evaluated using:
+
+Accuracy
+Confusion Matrix
+Classification Report
+Precision
+Recall
+F1-Score
